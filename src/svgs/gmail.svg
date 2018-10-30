@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 36.56">
+  <defs>
+    <style>.cls-1{fill:#dd4e40;}.cls-2{fill:#fff;}.cls-3{fill:url(#linear-gradient);}.cls-4{fill:#bababa;}.cls-5{fill:#e3e3e3;}</style>
+    <linearGradient id="linear-gradient" x1="32.13" y1="18.2" x2="46.67" y2="32.3" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#bababa" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="M5.92,36.55V9.72l19,12.8L43.82,9.72V36.55c.71,0,2.61,0,3.41,0C49.64,36.5,50,36,50,33.27v-30c-.19-2-1.37-3-3.41-3.28L25,14.74,3,0C1.26,0,.22,1.05,0,3.22V33.85a2.43,2.43,0,0,0,2.45,2.7Z"/>
+  <polygon class="cls-2" points="46.59 0 24.97 14.73 3.02 0 46.59 0"/>
+  <polygon class="cls-2" points="43.82 36.55 43.82 9.72 24.97 22.52 5.92 9.72 5.92 36.55 43.82 36.55"/>
+  <polyline class="cls-3" points="43.82 36.55 43.82 9.72 20.08 25.87 30.63 36.56"/>
+  <polygon class="cls-4" points="20.08 25.87 5.92 11.39 5.92 9.72 24.97 22.52 20.08 25.87"/>
+  <polygon class="cls-5" points="5.92 11.39 5.92 36.55 20.08 25.87 5.92 11.39"/>
+</svg>

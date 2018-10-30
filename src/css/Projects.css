@@ -1,0 +1,172 @@
+.projects {
+  background-color: rgb(7,8,38);
+  width: 100%;
+}
+.projects h1 {
+  color: white;
+  padding: 30px 0px;
+  box-sizing: border-box;
+}
+.boards {
+  background-image: url('../images/stars-small.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "project-board1 project-board2 project-board3"
+    "description1 description2 .";
+}
+.project-board:nth-child(1) {
+  grid-area: project-board1;
+}
+#description1 {
+  grid-area: description1;
+}
+.project-board:nth-child(3) {
+  grid-area: project-board2;
+}
+#description2 {
+  color: white;
+  grid-area: description2;
+}
+#project3 {
+  background-color: rgb(252,232,255);
+  padding: 5px;
+  box-sizing: border-box;
+  grid-area: project-board3;
+}
+#salon-img {
+  width: 100%;
+}
+.project-board {
+  min-height: 520px;
+  max-width: 480px;
+}
+.project-board h3 {
+  margin: 20px auto;
+}
+#project2 h3 {
+  color: white;
+}
+.calendar {
+  margin: auto;
+}
+.description-btn {
+  background: black;
+  color: white;
+  position: relative;
+  width: 140px;
+  height: 35px;
+  margin-top: 10px;
+  border: 3px solid white;
+  border-radius: 50px 50px;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+#project1 .description-btn {
+  border-color: rgb(154,157,184);
+}
+.description-btn span {
+  margin-right: 5px;
+  position: relative;
+  top: -3px;
+}
+.description-btn svg {
+  position: relative;
+  fill: #fff; 
+  width: 15px; 
+  height: 15px;
+}
+.shine {
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.2), rgba(255,255,255,0.5)
+  );
+  position: absolute;
+  top: -35px;
+  left: -65px;
+  width: 50px;
+  transform: rotateZ(-45deg);
+  height: 100px;
+  transition: left 0s;
+}
+.description-btn:hover > .shine {
+  left: 150px;
+  transition: left ease-in-out 400ms;
+}
+.project-description {
+  position: relative;
+  margin: 0px;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.project-description p {
+  line-height: 1.2em;
+}
+.project-description div {
+  padding-top: 5px;
+}
+.project-description div a {
+  color: rgb(84, 116, 131);
+  font-weight: 600;
+  text-decoration: none;
+}
+.project-description div a:hover {
+  color: rgb(64, 85, 156);
+}
+
+@media (max-width: 900px) {
+  .boards {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto 1fr auto 1fr;
+    grid-template-areas: 
+    "project-board1"
+    "description1"
+    "project-board2"
+    "description2"
+    "project-board3";
+  }
+  .project-board {
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto 1fr auto;
+  }
+  .project-board h3 {
+    margin: 5px auto;
+  }
+  #project3 img {
+    width: 80%;
+  }
+  #project3 .project-description {
+    padding: 5px 10%;
+  }
+}
+@media (max-width: 558px) {
+  .project-board {
+    display: block;
+    padding: 10px;
+  }
+}
+@media (max-width: 520px) {
+  #project3 img {
+    width: 100%;
+  }
+}
+@media (min-height: 1280px) {
+  .projects h1 {
+    padding: 0px 0px 40px 0px;
+  }
+}
+@media (min-width: 1800px) {
+  .project-board {
+    width: 480px;
+  }
+}

@@ -1,0 +1,291 @@
+.skills {
+  background-color: black;
+  background-image: url('../images/stars.jpg');
+  background-repeat: no-repeat;
+  background-size: 1460px 1460px;
+  background-attachment: fixed;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 20px 50px;
+  display: grid;
+  box-sizing: border-box;
+}
+.languages {
+  background-color: #fff;
+  margin: auto;
+  width: 100%;
+  height: 300px;
+  margin: 40px 40px 40px 0px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+.languages-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.lang-list h3 {
+  text-align: left;
+  display: inline;
+}
+.lang-item {
+  background-color: rgb(7,8,38);
+  color: white;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  text-align: left;
+}
+.lang-item span {
+  font-weight: 500;
+}
+.web-tech {
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+.web-block {
+  background: linear-gradient(135deg, #070826 1%,#070826 23%,#d4d4d4 100%,#d4d4d4 100%);
+  width: 100%;
+  height: 100%;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+.web-block h3 {
+  color: #fff;
+  margin: 0px;
+}
+.web-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin: 0px 20%;
+}
+.skill-wrapper {
+  display: grid;
+  max-width: 100%;
+}
+.skill-card {
+  background-color: #fff;
+  width: 500px;
+  height: 300px;
+  margin: 40px 0px;
+  text-align: left;
+}
+#react-logo {
+  width: 100px;
+  height: 100px;
+}
+#linode-logo {
+  width: 150px;
+  height: 100px;
+}
+#arduino-logo {
+  width: 150px;
+  height: 100px;
+}
+#illustrator-logo {
+  width: 100px;
+  height: 100px;
+}
+#photoshop-logo {
+  width: 100px;
+  height: 100px;
+}
+.skill-title {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+.skill-title h2 {
+  margin-left: 20px;
+  text-align: left;
+  font-size: 32px;
+  display: inline-block;
+}
+.skill-card hr {
+  margin: 0px auto;
+  width: 90%;
+}
+.skill-left {
+  justify-self: start;
+}
+.skill-right {
+  justify-self: end;
+}
+.skill-description {
+  padding: 5px;
+  box-sizing: border-box;
+  line-height: 1.2em;
+}
+#skill1, #skill3 {
+  font-size: 18px;
+}
+
+@media (max-width: 1010px) {
+  .lang-item span {
+    font-size: 14px;
+  }
+  .web-grid {
+    margin: 0px 10%;
+  }
+}
+@media (max-width: 948px) {
+  .lang-list h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 912px) {
+  .lang-item span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 848px) {
+  .web-tech {
+    padding: 0px;
+  }
+  .languages {
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .languages-split {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .lang-item {
+    margin-right: 0px;
+  }
+  .lang-list h3 {
+    font-size: 18px;
+  }
+  .lang-item span {
+    font-size: 16px;
+  }
+}
+@media (max-width: 620px) {
+  .skill-wrapper {
+    display: block;
+    width: 100%;
+  }
+  .skill-card {
+    width: 100%;
+  }
+}
+@media (max-width: 572px) {
+  .lang-item span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 564px) {
+  #react-logo {
+    width: 80px;
+    height: 80px;
+  }
+  #linode-logo {
+    width: 120px;
+    height: 80px;
+  }
+  #arduino-logo {
+    width: 120px;
+    height: 80px;
+  }
+  #illustrator-logo {
+    width: 80px;
+    height: 80px;
+  }
+  #photoshop-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .skill-title h2 {
+    font-size: 30px;
+  }
+  #skill2, skill4 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 540px) {
+  .lang-list h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 526px) {
+  .lang-item span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 510px) {
+  .skill-title h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 495px) {
+  .skill-title h2 {
+    font-size: 22px;
+  }
+  #skill2, #skill4 {
+    line-height: 1em;
+  }
+}
+@media (max-width: 458px) {
+  .skill-title h2 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 433px) {
+  #react-logo {
+    width: 60px;
+    height: 60px;
+  }
+  #linode-logo {
+    width:  90px;
+    height: 60px;
+  }
+  #arduino-logo {
+    width: 90px;
+    height: 60px;
+  }
+  #illustrator-logo {
+    width: 60px;
+    height: 60px;
+  }
+  #photoshop-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .skill-title h2 {
+    font-size: 18px;
+  }
+  .skill-card {
+    min-height: 300px;
+    height: auto;
+  }
+}
+@media (max-width: 400px) {
+  .skills {
+    padding: 20px 20px 20px 50px;
+  }
+  .skill-title h2 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 370px) {
+  .languages {
+    padding: 0px 10px 10px 10px;
+  }
+  .web-grid {
+    margin: auto;
+  }
+  .skill-wrapper {
+    width: 250px;
+  }
+  .skill-title {
+    grid-template-columns: auto 0px;
+    justify-items: center;
+  }
+  .skill-title h2 {
+    display: none;
+  }
+}
