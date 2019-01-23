@@ -1,51 +1,69 @@
-import React, { Component } from 'react'
+import React from 'react';
 import '../Form.css'
+import { Formik, Form, Field } from 'formik';
 
-class Form extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      firstName: "",
-      lastName: "",
-      phoneNumber: ""
-    }
-    this.handleClick = this.handleClick.bind(this)
-  }
+const input1 = ({ field, form }) => { return (
+  <div className="inputs">
+    <label>
+      First Name
+      <br/>
+      <input type="text" {...field} placeholder="John"/>
+    </label>
+  </div>
+)}
+const input2 = ({ field, form }) => { return (
+  <div className="inputs">
+    <label>
+      Last Name
+      <br/>
+      <input type="text" {...field} placeholder="Doe"/>
+    </label>
+  </div>
+)}
+const input3 = ({ field, form }) => { return (
+  <div className="inputs">
+    <label>
+      Phone
+      <br/>
+      <input type="number" {...field} placeholder="000-000-0000"/>
+    </label>
+  </div>
+)}
 
-  handleClick(e) {
-    e.stopPropagation()
-    e.preventDefault()
-  }
-
-  render() {
-    const { onExit, display, date } = this.props
-    return (
-      <div className="form" style={{display: display}} onClick={onExit}>
-        <div className="content-wrapper">
-          <i className="ion-android-cancel"></i>
-          <div className="form-header" onClick={this.handleClick}>
-            <h3>Scheduling an appointment on:</h3> 
-            <h4>{date}</h4>
+const MyForm = () => (
+  <div id="sch-form" className="form-container">
+    <h1 className="form-header">Scheduling on</h1>
+    <h1 className="form-header">Sep 5th</h1>
+    <Formik
+      initialValues={{ firstName: '', lastName: '', number: '' }}
+      onSubmit={(values, { setSubmitting }) => {
+        setTimeout(() => {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
+      }}
+    >
+      {({ isSubmitting }) => (
+        <Form>
+          <Field name="firstName">
+            {input1}
+          </Field>
+          <Field name="lastName" >
+            {input2}
+          </Field>
+          <Field name="number" >
+            {input3}
+          </Field>
+          <div className="button-container">
+            <button className="form-btn">
+              <div className="shine"></div>
+              <span>Book!</span>
+            </button>
           </div>
-          <form className="form-fields" id="email-form" method="POST" action="api/mail-post.php" accept-charset="utf-8" onClick={this.handleClick}>
-            <label>
-              <p>First Name</p>
-              <input name="firstName" type="text" placeholder="John"/>
-            </label>
-            <label>
-              <p>Last Name</p>
-              <input name="lastName" type="text" placeholder="Doe"/>
-            </label>
-            <label>
-              <p>Phone Number</p>
-              <input name="phone" type="text" placeholder="(000) 000-000"/>
-            </label>
-            <button className="btn" type="submit">Book!</button>
-          </form>
-        </div>
-      </div>
-    )
-  }
-}
+        </Form>
+      )}
+    </Formik>
+  </div>
+);
 
-export default Form;
+export default MyForm;

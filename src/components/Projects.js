@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react';
 
 import ProjectBoard from './ProjectBoard.js'
-import colorTheme from './colorful-calendar/calendar.colors.js'
-import Calendar from './colorful-calendar/Calendar.js'
-import ScheduleMe from './schedule-me/ScheduleMe.js'
+import colorTheme from './schedule-me/calendar.colors.js'
+import Calendar from './colorful-calendar/components/Calendar.js'
+import Scheduler from './schedule-me/components/Scheduler.js'
+import MyForm from './schedule-me/components/Form.js'
 import '../css/Projects.css'
 
 const description1 = (
@@ -51,17 +52,21 @@ class Projects extends Component {
             header={"Colorful Calendar"} 
             bgColor={"rgb(252,232,255)"}
             display={"none"}
-            app={<Calendar className="calendar" date={new Date()} colors={colorTheme.original} />}
+            app={<Calendar width={300} date={new Date()} colors={colorTheme.original} />}
             id={"project1"}
             content={description1}
             descriptionId={"description1"}
           />
           <ProjectBoard 
-            header={"Schedule Me"} 
-            colorTheme={colorTheme.purplenight}
+            header={"Schedule Me"}
             bgColor={"rgb(7,8,38)"}
             display={"none"}
-            app={<ScheduleMe className="calendar" date={new Date()} colors={colorTheme.purplenight} />}
+            app={<Scheduler
+              width={300}
+              date={new Date()}
+              colors={colorTheme.purplenight}
+              form={<MyForm />}
+              />}
             id={"project2"}
             content={description2}
             descriptionId={"description2"}

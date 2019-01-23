@@ -1,156 +1,109 @@
 .calendar {
-  box-sizing: border-box;
-  width: 98%;
-  border-radius: 50px 50px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  display: grid;
-}
-.ui {
-  position: relative;
-  padding-bottom: 40px;
-}
-.c-header {
-  height: 50px;
-  width: 88%;
-  margin: auto;
-  font-weight: 700;
-  font-size: 35px;
-  border-radius: 50px 50px;
-  display: grid;
-  align-items: center;
-  justify-items: center;
+  width: 600px;
+  border-radius: 10px 10px;
+  padding: 20px;
 }
 
-.c-header2 {
-  height: 50px;
-  width: 45%;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 0px 0px 50px 50px;
-  mask-image: radial-gradient(white, black);
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-  display: grid;
-  align-items: center;
-  justify-items: center;
+#full-date-view {
+  font: 700 18px sans-serif;
 }
-.container-3d {
-  background-color: rgba(255,255,255,0);
-  position: relative;
-  width: 130px;
-  height: 30px;
-  perspective: 260px;
-}
-.box-3d {
-  width: 130px;
-  margin: auto;
-  transform-style: preserve-3d;
-  transition: transform 300ms linear;
-}
-.box-3d div {
-  position: absolute;
-  font-size: 22px;
-  font-weight: 500;
-  width: 130px;
-  height: 30px;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-}
-#front {
-  transform: translateZ(65px);
-}
-#back {
-  transform: rotateY(180deg) translateZ(65px);
-}
-#left {
-  transform: rotateY(-90deg) translateX(-65px);
-  transform-origin: left;
-}
-#right {
-  transform: rotateY(90deg) translateX(65px);
-  transform-origin: right;
+#month-year-view {
+  font: 600 16px sans-serif;
 }
 
-.arrow-btns {
-  position: absolute;
-  height: 68px;
+.month-year-group {
+  transform-origin: 50% 128.5%;
+  transition: transform ease-in 300ms;
+}
+.month-year {
+  font: 600 16px sans-serif;
+  fill: black;
+}
+
+.week-day-names {
   width: 100%;
-  top: 60px;
-}
-#arrowBtn {
-  height: 60px;
-  width: 60px;
-}
-#left-arrow {
-  height: 100%;
-  width: 94px;
-  border-radius: 50px 50px;
-  position: absolute;
-  transform: rotateY(180deg);
-  left: 20px;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-}
-#right-arrow {
-  height: 100%;
-  width: 94px;
-  border-radius: 50px 50px;
-  position: absolute;
-  right: 20px;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-}
-.display {
-  position: relative;
-  max-width: 100%;
-  height: 380px;
-  margin: 0px 10px 0px 10px;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-rows: auto 1fr;
-}
-.d-wkDays {
-  height: 60px;
-  width: 100%;
-  border-radius: 50px 50px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 600;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-.d-wkDays div {
-  display: grid;
+  align-items: center;
   justify-items: center;
-  align-items: end;
-  padding-bottom: 10px;
-  font-weight: bold;
-  font-size: 1.5em;
 }
-.d-wkDays div:last-child {
-  border-right: none !important;
-}
-.d-numbers {
-  width: 100%;
-  height: 100%;
+
+.date-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
+  width: 700px;
 }
-.dateNode {
-  height: 100%;
-  width: 100%;
-  font-size: 20px;
+.date-node svg {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.date-node span {
   font-weight: 600;
-  border-radius: 50%;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  transition: transform linear 300ms;
-  cursor: default
+  grid-row: 1/2;
+  grid-column: 1/2;
 }
-.rotateNumber {
-  transform: rotateY(180deg);
+
+.rotate-enter {
+  transform-origin: 56% 129%;
+  transform: rotate(-180deg) translate(-10px);
+  transition: transform ease-in 5000ms;
+}
+.rotate-enter-active {
+  transform-origin: 56% 129%;
+  transform: rotate(-360deg) translate(-10px);
+  transition: transform ease-in 5000ms;
+}
+.rotate-enter-done {
+  transform-origin: 56% 129%;
+  transform: rotate(0deg) translate(-10px);
+}
+
+.rotate-exit {
+  transform: rotate(0deg) translate(-10px);
+  transition: transform ease-in 5000ms;
+}
+.rotate-exit-active {
+  transform-origin: 56% 129%;
+  transform: rotate(-180deg) translate(-10px);
+}
+.rotate-exit-done {
+  transform-origin: 56% 129%;
+  transform: rotate(-180deg) translate(-10px);
+}
+
+
+.rotate-back-enter {
+  transform-origin: 56% 129%;
+  transform: rotate(180deg) translate(-10px);
+  transition: transform ease-in 5000ms;
+}
+.rotate-back-enter-active {
+  transform-origin: 56% 129%;
+  transform: rotate(360deg) translate(-10px);
+  transition: transform ease-in 5000ms;
+}
+.rotate-back-enter-done {
+  transform-origin: 56% 129%;
+  transform: rotate(0deg) translate(-10px);
+}
+
+.rotate-back-exit {
+  transform-origin: 56% 129%;
+  transform: rotate(0deg) translate(-10px);
+}
+.rotate-back-exit-active {
+  transform-origin: 56% 129%;
+  transform: rotate(180deg) translate(-10px);
+}
+.rotate-back-exit-done {
+  transform-origin: 56% 129%;
+  transform: rotate(180deg) translate(-10px);
+}
+
+.rotate-appear {
+  transform-origin: 56% 129%;
+  transform: rotate(0deg) translate(-10px);
 }

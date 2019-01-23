@@ -1,12 +1,21 @@
 .projects {
   background-color: rgb(7,8,38);
   width: 100%;
+  position: relative;
 }
+
+.form-container h1 {
+  margin: 0px !important;
+  padding-bottom: 5px !important;
+  padding-top: 5px !important;
+}
+
 .projects h1 {
   color: white;
   padding: 30px 0px;
   box-sizing: border-box;
 }
+
 .boards {
   background-image: url('../images/stars-small.jpg');
   background-position: center;
@@ -61,6 +70,7 @@
   width: 140px;
   height: 35px;
   margin-top: 10px;
+  margin-bottom: 10px;
   border: 3px solid white;
   border-radius: 50px 50px;
   outline: none;

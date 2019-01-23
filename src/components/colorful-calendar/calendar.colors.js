@@ -1,39 +1,60 @@
 const colorTheme = {
   redflat: {
+    background: "#383737",
     textColor: "#fff",
-    componentBG: "#383737",
-    header1BG: "#383737",
-    header2BG: "#383737",
-    arrowsBG: "#ff2b2b",
-    weekDayNamesBG: "#c4c1c1",
-    prevMonthNodesBG: "#ff2b2b",
-    currentDateNodeBG: "#747272",
-    currentMonthNodesBG: "#c4c1c1",
-    nextMonthNodesBG: "#ff2b2b"
+    calendarUI: {
+      background: "#383737",
+      textColor: "#fff",
+      currentDateBG: "#383737",
+      monthYearViewBG: "#383737",
+      arrowsBG: "#ff2b2b",
+    },
+    calendarView: {
+      weekDayNamesBG: "#c4c1c1",
+      textColor: "#fff",
+      leadDate: "#ff2b2b",
+      currentDate: "#747272",
+      monthDate: "#c4c1c1",
+      postDate: "#ff2b2b"
+    }
   },
   original: {
+    background: "#292828",
     textColor: "#000",
-    componentBG: "#292828",
-    header1BG: "#fff",
-    header2BG: "#fff",
-    arrowsBG: "#fff",
-    weekDayNamesBG: "#fff",
-    prevMonthNodesBG: "#8ee5ff",
-    currentDateNodeBG: "#c4c1c1",
-    currentMonthNodesBG: "#fff",
-    nextMonthNodesBG: "#8ee5ff"
+    calendarUI: {
+      background: "#292828",
+      textColor: "#000",
+      currentDateBG: "#fff",
+      monthYearViewBG: "#fff",
+      arrowsBG: "#fff",
+    },
+    calendarView: {
+      weekDayNamesBG: "#fff",
+      textColor: "#000",
+      leadDate: "#8ee5ff",
+      currentDate: "#c4c1c1",
+      monthDate: "#fff",
+      postDate: "#8ee5ff"
+    }
   },
   purplenight: {
+    background: "#252525",
     textColor: "#fff",
-    componentBG: "#252525",
-    header1BG: "#383737",
-    header2BG: "#383737",
-    arrowsBG: "#cbcbff",
-    weekDayNamesBG: "#383737",
-    prevMonthNodesBG: "#cbcbff",
-    currentDateNodeBG: "#383737",
-    currentMonthNodesBG: "#8181aa",
-    nextMonthNodesBG: "#cbcbff"
+    calendarUI: {
+      background: "#252525",
+      textColor: "#fff",
+      currentDateBG: "#383737",
+      monthYearViewBG: "#383737",
+      arrowsBG: "#cbcbf9",
+    },
+    calendarView: {
+      weekDayNamesBG: "#383737",
+      textColor: "#fff",
+      leadDate: "#cbcbf9",
+      currentDate: "#383737",
+      monthDate: "#8181aa",
+      postDate: "#cbcbf9"
+    }
   }
 }
 
