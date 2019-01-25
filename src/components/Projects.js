@@ -52,7 +52,7 @@ class Projects extends Component {
             header={"Colorful Calendar"} 
             bgColor={"rgb(252,232,255)"}
             display={"none"}
-            app={<Calendar width={300} date={new Date()} colors={colorTheme.original} />}
+            app={<Calendar width={280} date={new Date()} colors={colorTheme.original} />}
             id={"project1"}
             content={description1}
             descriptionId={"description1"}
@@ -62,11 +62,11 @@ class Projects extends Component {
             bgColor={"rgb(7,8,38)"}
             display={"none"}
             app={<Scheduler
-              width={300}
+              width={280}
               date={new Date()}
-              colors={colorTheme.purplenight}
+              colors={colorTheme.redflat}
               form={<MyForm />}
-              />}
+            />}
             id={"project2"}
             content={description2}
             descriptionId={"description2"}

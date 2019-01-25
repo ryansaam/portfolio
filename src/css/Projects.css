@@ -53,6 +53,7 @@
 .project-board {
   min-height: 520px;
   max-width: 480px;
+  position: relative;
 }
 .project-board h3 {
   margin: 20px auto;
