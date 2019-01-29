@@ -59,15 +59,17 @@ const Calendar = props => {
         <RotatingMonths date={renderedDate} rotate={degrees}>
           <text id="month-year-view" className="month-year" x="75" y="50" 
           style={{fill: props.colors.textColor}}>{`${months[topMonthIndex]} ${year}`}</text>
-          <text 
-            id="month-year-view" 
-            className="month-year" 
-            x="75" 
-            y="140"
-            style={{fill: props.colors.textColor, transformOrigin: "50% 50%", transform: "translate(18px, 200px) rotate(180deg)"}}
-          >
-            {`${months[bottomMonthIndex]} ${year}`}
-          </text>
+          <g style={{transformOrigin: "50% 50%", transform: "translate(18px, 200px) rotate(180deg)"}} >
+            <text 
+              id="month-year-view" 
+              className="month-year" 
+              x="75" 
+              y="140"
+              style={{fill: props.colors.textColor}}
+            >
+              {`${months[bottomMonthIndex]} ${year}`}
+            </text>
+          </g>
         </RotatingMonths>
       }>
         <ControlArrow
